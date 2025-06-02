@@ -1,0 +1,29 @@
+:root {
+  --scale-increment: 0.05;
+  --translate-increment: -13%;
+}
+.wrapper {
+  display: grid;
+  margin: auto 0;
+}
+
+.card {
+  width: 356px;
+  height: 74px;
+  box-shadow: 0 4px 12px #0000001a;
+  border: 1px solid lch(12% 0 0);
+  background: lch(2% 0 0);
+  border-radius: 8px;
+  grid-area: 1 / 1;
+  transform: scale(calc(1 - var(--index) * var(--scale-increment)))
+    translateY(calc(var(--index) * var(--translate-increment)));
+}
+
+/* .card:nth-child(2) { */
+/* 13% as our increment is just a value that felt good to me */
+/* transform: scale(0.95) translateY(-13%);
+} */
+
+/* .card:nth-child(3) {
+  transform: scale(1) translateY(0);
+} */
