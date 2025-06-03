@@ -1,15 +1,18 @@
 import type { CSSProperties } from 'react';
 
 export default function Page() {
-  return <StackedComponent />;
+  return (
+    <>
+      <StackedComponent />
+    </>
+  );
 }
 
 const LENGTH = 3;
-
 function StackedComponent() {
   return (
     <div
-      className="flex h-full w-full flex-col items-center justify-center"
+      className="flex min-h-screen w-screen flex-col items-center justify-center"
       style={
         {
           '--scale-increment': 0.05,
@@ -17,10 +20,10 @@ function StackedComponent() {
         } as CSSProperties
       }
     >
-      {new Array(LENGTH).fill(0).map((_, i) => (
+      {Array.from({ length: LENGTH }).map((_, i) => (
         <div
           key={i}
-          className="h-[74px] w-[356px] rounded-lg border border-neutral-900 bg-neutral-950 shadow-lg"
+          className="h-[64px] w-[320px] rounded-[6px] border border-[#fff]/10 bg-[#000]"
           style={
             {
               '--index': LENGTH - 1 - i,

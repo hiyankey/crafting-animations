@@ -6,5 +6,5 @@
 }
 
 body {
-  @apply min-h-screen w-screen bg-[var(--page-main)] text-[var(--cnt)];
+  @apply bg-[var(--page-main)] text-[var(--cnt)];
 }
