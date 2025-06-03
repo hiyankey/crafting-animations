@@ -1,11 +1,13 @@
 export default function Page() {
   return (
     <div className="flex min-h-screen w-screen flex-col items-center justify-center">
-      <div className="flex aspect-square w-[400px] overflow-hidden rounded-[12px] border border-[#fff]/5 bg-[#fff]/3 p-2 hover:[&_div]:translate-y-[0%]">
-        <div className=" relative mt-auto flex w-full translate-y-[calc(100%_+_8px)] flex-col rounded-[6px] border border-[#fff]/5 bg-[#fff]/3 p-2 transition-transform duration-500 [transition-timing-function:cubic-bezier(0.19,_1,0.22,1)]">
+      <div className="flex aspect-square w-[400px] overflow-hidden rounded-[12px] border border-[#fff]/5 bg-[#fff]/3 p-2 hover:[&_div]:translate-y-[0%] focus-visible:[&_div]:translate-y-[0%]">
+        <div className=" group relative mt-auto flex w-full translate-y-[calc(100%_+_8px)] flex-col overflow-hidden rounded-[6px] border border-[#fff]/5 bg-[#fff]/3 p-2 transition-transform duration-500 [transition-timing-function:cubic-bezier(0.19,_1,0.22,1)] [&_svg]:transition-transform [&_svg]:duration-400 [&_svg]:[transition-timing-function:cubic-bezier(0.785,0.135,0.15,0.86]">
           <h3>Project name</h3>
           <p className="opacity-70">Project description</p>
-          <Icon className="absolute top-4 right-4" />
+
+          <Icon className="-translate-y-[400%] group-hover:-translate-y-[0%] absolute top-4 right-4" />
+          <Icon className="absolute top-4 right-4 translate-y-[0%] group-hover:translate-y-[800%]" />
         </div>
       </div>
     </div>
